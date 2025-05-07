@@ -1,0 +1,204 @@
+:root {
+    --bleu-fonce: #1A237E;
+    --rouge: #D32F2F;
+    --rouge-clair: #FF5252;
+    --noir: #212121;
+    --gris-clair: #F5F5F5;
+    --blanc: #ffffff;
+  }
+  
+  /* Reset */
+  {
+  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--gris-clair);
+    color: var(--noir);
+  }
+  
+  /* ANIMATIONS DE BASE */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes rotateLogo {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes floatBubble {
+    0% { transform: translateY(0); opacity: 0.3; }
+    50% { transform: translateY(-20px); opacity: 0.6; }
+    100% { transform: translateY(0); opacity: 0.3; }
+  }
+  
+  /* EN-TÊTE */
+  header {
+    background-color: var(--bleu-fonce);
+    color: var(--blanc);
+    padding: 20px;
+    text-align: center;
+    animation: fadeDown 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  header img {
+    height: 60px;
+    animation: bounce 2s infinite;
+  }
+  
+  /* Bulles dans nav */
+  nav::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: radial-gradient(var(--rouge-clair) 5px, transparent 6px),
+                      radial-gradient(var(--rouge) 4px, transparent 5px);
+    background-size: 50px 50px;
+    animation: floatBubble 5s infinite linear;
+    opacity: 0.1;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--blanc);
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: var(--rouge-clair);
+  }
+  
+  /* ACCUEIL */
+  #accueil {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #E3F2FD, #ffffff);
+    animation: fadeUp 1s ease-in-out;
+  }
+  
+  #accueil img {
+    max-width: 300px;
+    margin: 20px auto;
+  }
+  
+  #accueil p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+    line-height: 1.7;
+    text-align: center;
+  }
+  
+  /* PRODUITS */
+  .produit {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--blanc);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .produit h2 {
+    color: var(--bleu-fonce);
+    margin-bottom: 10px;
+  }
+  
+  .produit img {
+    max-width: 300px;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  
+  .produit p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* PRIX */
+  .prix {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  .prix-original {
+    text-decoration: line-through;
+    color: gray;
+    margin-right: 10px;
+  }
+  
+  .prix-promo {
+    color: var(--rouge);
+    font-weight: bold;
+  }
+  
+  /* CONTACT */
+  #contact {
+    background-color: var(--gris-clair);
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  form {
+    background-color: var(--blanc);
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  form input, form label {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* FOOTER */
+  footer {
+    background-color: var(--bleu-fonce);
+    color: var(--blanc);
+    text-align: center;
+    padding: 15px;
+  }
+  
+  footer a {
+    color: var(--rouge-clair);
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
