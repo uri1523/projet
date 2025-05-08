@@ -60,7 +60,7 @@
   }
   
   header img {
-    height: 60px;
+    height: 90px;
     animation: bounce 2s infinite;
   }
   
@@ -201,4 +201,94 @@
   
   footer a:hover {
     text-decoration: underline;
+
   }
+
+  @keyframes glowEffect {
+    0% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 0 50px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .form-container {
+    background-color: #F5F5F5; /* Gris clair pour créer du contraste */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour souligner l'espace */
+    animation: glowEffect 1.5s infinite alternate;
+  }
+  
+  input, button {
+    background-color: #ffffff;
+    border: 2px solid #1A237E; /* Bordure bleue pour le contraste */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button:hover {
+    background-color: #1A237E;
+    color: white;
+  }
+
+  /* RESPONSIVE DESIGN */
+
+/* Tablettes */
+@media (max-width: 992px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .produit {
+    margin: 20px 10px;
+  }
+
+  #accueil img, .produit img {
+    max-width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  header {
+    padding: 10px;
+  }
+
+  header img {
+    height: 60px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #accueil, .produit, #contact {
+    padding: 30px 10px;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  form input, form label {
+    font-size: 1em;
+  }
+}
