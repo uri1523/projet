@@ -268,16 +268,20 @@
 
 /* Responsive : affichage du bouton et du menu hamburger */
 @media (max-width: 768px) {
-  /* Afficher le bouton hamburger en mobile */
+  
   .menu-toggle {
-    display: block; /* Rendre visible le bouton hamburger */
+    display: block; 
+    background-color: var(--rouge);
+    color: var(--blanc);
+    padding: 10px;
   }
 
   /* Menu caché par défaut */
   #nav-list {
     display: none;
     flex-direction: column;
-    background-color: white;
+    background-color: #1A237E;
+    color: #fff;
     padding: 1rem;
     border-radius: 5px;
   }
