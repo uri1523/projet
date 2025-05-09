@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerTechPro - Formulaire de contact</title>
+    <link rel="stylesheet" href="destination.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    
+    <section class="intro">
+        <h1>Besoin de plus de détails sur nos produits ?</h1>
+        <p>Envie de rejoindre notre communauté et découvrir toutes nos innovations ? Remplissez ce formulaire et faites-le nous parvenir. Nous serons heureux de répondre à toutes vos questions !</p>
+    </section>
+
+    
+    <section class="image-section">
+        <img src="image/logo.jpeg" alt="Logo PowerTechPro" class="logo-img">
+    </section>
+    <section class="features">
+    <h2>Pourquoi choisir PowerTechPro ?</h2>
+    <ul class="features-list">
+        <li><i class="fas fa-bolt"></i> Performance maximale</li>
+        <li><i class="fas fa-clock"></i> Gain de temps garanti</li>
+        <li><i class="fas fa-users"></i> Conçu pour tous les profils</li>
+    </ul>
+</section>
+
+    
+    <section class="cta">
+        <p>👇🏼👇🏼 Remplissez le formulaire ci-dessous et faites partie de l'aventure PowerTechPro ! 👇🏼👇🏼</p>
+    </section>
+
+    
+
+    <!-- Formulaire -->
+    <!-- Nouveau conteneur global -->
+<section class="form-wrapper">
+
+    
+    <div class="form-image">
+        <img src="image/client-removebg-preview.png" alt="Support client PowerTechPro">
+    </div>
+
+
+    <section class="form-container">
+        <form action="#" method="POST">
+
+        
+            <label for="full-name">Nom complet :</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Votre nom complet" required>
+
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="exemple@domaine.com" required>
+
+            
+            <label for="phone">Numéro de téléphone :</label>
+            <input type="tel" id="phone" name="phone" placeholder="Ex: +225 01 23 45 67" required>
+
+            
+            <label for="country">Pays :</label>
+            <select id="country" name="country" required>
+                <option value="france">France</option>
+                <option value="ivory-coast">Côte d'Ivoire</option>
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="germany">Allemagne</option>
+                <option value="uk">Royaume-Uni</option>
+            </select>
+
+            
+            <label for="dob">Date de naissance :</label>
+            <input type="date" id="dob" name="dob" required>
+
+            
+            <label for="gender">Sexe :</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Homme</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Femme</label>
+
+            
+            <label for="languages">Langues parlées :</label>
+            <select id="languages" name="languages" multiple required>
+                <option value="french">Français</option>
+                <option value="english">Anglais</option>
+                <option value="spanish">Espagnol</option>
+                <option value="portuguese">Portugais</option>
+            </select>
+
+            
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez vos attentes, questions ou besoins..." required></textarea>
+
+            
+            <label for="consent">
+                <input type="checkbox" id="consent" name="consent" required>
+                J'accepte les conditions d'utilisation et la politique de confidentialité.
+            </label>
+
+            
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 PowerTechPro. Tous droits réservés.</p>
+        <a href="index.html">Retour à l'accueil</a>
+    </footer>
+    
+
+</body>
+</html>

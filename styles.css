@@ -253,21 +253,27 @@
     background-color: #b71c1c;
   }
   /* Bouton menu caché en version bureau */
+
+
+/* Cacher le bouton hamburger en version bureau */
 .menu-toggle {
-  display: none;
+  display: none; /* Cacher le bouton par défaut */
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
   color: #1A237E;
+  z-index: 1000;
 }
 
-/* Responsive */
+/* Responsive : affichage du bouton et du menu hamburger */
 @media (max-width: 768px) {
+  /* Afficher le bouton hamburger en mobile */
   .menu-toggle {
-    display: block;
+    display: block; /* Rendre visible le bouton hamburger */
   }
 
+  /* Menu caché par défaut */
   #nav-list {
     display: none;
     flex-direction: column;
@@ -276,14 +282,18 @@
     border-radius: 5px;
   }
 
-  #nav-list.show {
+  /* Menu visible lorsque .active est ajouté */
+  #nav-list.active {
     display: flex;
   }
 
+  /* Espacement entre les éléments du menu */
   #nav-list li {
     margin: 10px 0;
   }
 }
+
+
 
 
   /* RESPONSIVE DESIGN */
