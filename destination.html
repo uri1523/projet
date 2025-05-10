@@ -39,30 +39,25 @@
     <!-- Nouveau conteneur global -->
 <section class="form-wrapper">
 
-    
     <div class="form-image">
         <img src="image/client-removebg-preview.png" alt="Support client PowerTechPro">
     </div>
 
-
     <section class="form-container">
         <form action="#" method="POST">
 
-        
             <label for="full-name">Nom complet :</label>
             <input type="text" id="full-name" name="full-name" placeholder="Votre nom complet" required>
 
-            
             <label for="email">Email :</label>
             <input type="email" id="email" name="email" placeholder="exemple@domaine.com" required>
 
-            
             <label for="phone">Numéro de téléphone :</label>
             <input type="tel" id="phone" name="phone" placeholder="Ex: +225 01 23 45 67" required>
 
-            
             <label for="country">Pays :</label>
             <select id="country" name="country" required>
+                <option value="" disabled selected>Choisissez votre pays</option>
                 <option value="france">France</option>
                 <option value="ivory-coast">Côte d'Ivoire</option>
                 <option value="usa">USA</option>
@@ -71,19 +66,22 @@
                 <option value="uk">Royaume-Uni</option>
             </select>
 
-            
             <label for="dob">Date de naissance :</label>
             <input type="date" id="dob" name="dob" required>
 
-            
-            <label for="gender">Sexe :</label>
-            <input type="radio" id="male" name="gender" value="male" required>
-            <label for="male">Homme</label>
-            <input type="radio" id="female" name="gender" value="female" required>
-            <label for="female">Femme</label>
+            <fieldset class="gender-fieldset">
+                <legend>Sexe :</legend>
+                <label>
+                    <input type="radio" name="gender" value="male" required>
+                    Homme
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female" required>
+                    Femme
+                </label>
+            </fieldset>
 
-            
-            <label for="languages">Langues parlées :</label>
+            <label for="languages">Langues parlées : <small>(Ctrl ou Cmd + clic pour sélection multiple)</small></label>
             <select id="languages" name="languages" multiple required>
                 <option value="french">Français</option>
                 <option value="english">Anglais</option>
@@ -91,22 +89,18 @@
                 <option value="portuguese">Portugais</option>
             </select>
 
-            
             <label for="message">Message :</label>
             <textarea id="message" name="message" rows="5" placeholder="Décrivez vos attentes, questions ou besoins..." required></textarea>
 
-            
-            <label for="consent">
+            <label for="consent" class="consent-label">
                 <input type="checkbox" id="consent" name="consent" required>
                 J'accepte les conditions d'utilisation et la politique de confidentialité.
             </label>
 
-            
             <button type="submit">Envoyer</button>
         </form>
     </section>
 </section>
-
 
     <!-- Footer -->
     <footer>

@@ -83,26 +83,32 @@
     <h2>Contactez-nous</h2>
     <p>Pour plus d'informations, contactez-nous via le formulaire ci-dessous.</p>
     <form action="#" method="post">
-      <label for="nom">Nom :</label><br>
-      <input type="text" id="nom" name="nom" required><br><br>
+    <label for="nom">Nom :</label><br>
+    <input type="text" id="nom" name="nom" placeholder="Votre nom" required><br><br>
 
-      <label for="prenom">Prénom :</label><br>
-      <input type="text" id="prenom" name="prenom" required><br><br>
+    <label for="prenom">Prénom :</label><br>
+    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required><br><br>
 
-      <label for="age">Âge :</label><br>
-      <input type="number" id="age" name="age" min="1" max="120" required><br><br>
+    <label for="age">Âge :</label><br>
+    <input type="number" id="age" name="age" min="1" max="120" placeholder="Votre âge" required><br><br>
 
-      <label>Sexe :</label><br>
-      <input type="radio" id="homme" name="sexe" value="homme" required>
-      <label for="homme">Homme</label><br>
-      <input type="radio" id="femme" name="sexe" value="femme">
-      <label for="femme">Femme</label><br><br>
+    <fieldset class="gender-fieldset">
+        <legend>Sexe :</legend>
+        <label>
+            <input type="radio" id="homme" name="sexe" value="homme" required>
+            Homme
+        </label><br>
+        <label>
+            <input type="radio" id="femme" name="sexe" value="femme">
+            Femme
+        </label><br><br>
+    </fieldset>
 
-      <label for="email">Email :</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+    <label for="email">Email :</label><br>
+    <input type="email" id="email" name="email" placeholder="exemple@domaine.com" required><br><br>
 
-      <input type="submit" value="S'inscrire">
-    </form>
+    <input type="submit" value="S'inscrire">
+</form>
   </section>
 
   <!-- Footer -->
